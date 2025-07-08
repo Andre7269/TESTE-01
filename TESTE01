@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oferta Especial</title>
+  <meta name="description" content="Página de oferta com rastreamento do Facebook Pixel.">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '720175764507671');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=720175764507671&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    #loading {
+      display: none;
+      font-weight: bold;
+      color: green;
+      margin-top: 20px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      background-color: #1b74e4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #155ab6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Oferta Especial</h1>
+    <p>Adquira agora por <strong>€12,99</strong> e tenha acesso exclusivo.</p>
+    <button onclick="processarCompra()">Comprar agora</button>
+    <div id="loading">Processando sua compra...</div>
+  </div>
+
+  <script>
+    function processarCompra() {
+      document.getElementById('loading').style.display = 'block';
+      setTimeout(() => {
+        window.location.href = 'thanks.html';
+      }, 2000); // 2 segundos de espera
+    }
+  </script>
+</body>
+</html>
